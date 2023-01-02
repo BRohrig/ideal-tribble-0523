@@ -20,6 +20,7 @@ RSpec.describe 'studio index page' do
     visit '/studios'
 
     within "#studio_id-#{@studio1.id}" do
+      expect(page).to have_content(@studio1.name)
       expect(page).to have_content(@movie1.title)
       expect(page).to have_content(@movie1.creation_year)
       expect(page).to have_content(@movie1.genre)
@@ -37,6 +38,7 @@ RSpec.describe 'studio index page' do
     end
 
     within "#studio_id-#{@studio2.id}" do
+      expect(page).to have_content(@studio2.name)
       expect(page).to have_content(@movie4.title)
       expect(page).to have_content(@movie4.creation_year)
       expect(page).to have_content(@movie4.genre)
@@ -54,6 +56,7 @@ RSpec.describe 'studio index page' do
     end
 
     within "#studio_id-#{@studio3.id}" do
+      expect(page).to have_content(@studio3.name)
       expect(page).to have_content(@movie7.title)
       expect(page).to have_content(@movie7.creation_year)
       expect(page).to have_content(@movie7.genre)
