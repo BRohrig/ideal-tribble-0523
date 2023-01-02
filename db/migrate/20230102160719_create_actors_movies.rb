@@ -1,5 +1,0 @@
-class CreateActorsMovies < ActiveRecord::Migration[5.2]
-  def change
-    create_join_table :actors, :movies
-  end
-end
