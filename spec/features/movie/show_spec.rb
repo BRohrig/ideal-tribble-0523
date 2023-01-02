@@ -5,8 +5,8 @@ RSpec.describe 'movie show page' do
     @studio = Studio.create!(name: "Bad Studio", location: "Fargo")
     @movie = @studio.movies.create!(title: "That One Movie", creation_year: "2021", genre: "Comedy")
     @actor1 = @movie.actors.create!(name: "Jim", age: 23)
-    @actor2 = @movie.actors.create!(name: "Bob", age: 26)
     @actor3 = @movie.actors.create!(name: "Will", age: 92)
+    @actor2 = @movie.actors.create!(name: "Bob", age: 26)
     @actor4 = @movie.actors.create!(name: "Jane", age: 138)
   end
 
